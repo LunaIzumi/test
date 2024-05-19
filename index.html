@@ -589,7 +589,29 @@ blink {animation: blink 1.5s infinite; margin-left: -5px;}
 
 <!--------------------------- START MAIN CONTENT---------------------------->
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/9KY0nlLUZHc?rel=0&amp;autoplay=1&amp;controls=0&amp;showinfo=0&mute=1" frameborder="0" allowfullscreen></iframe>
+<div id="ytplayer"></div>
+<script>
+// Load the IFrame Player API code asynchronously.
+var tag = document.createElement('script');
+tag.src = "https://www.youtube.com/player_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+// Replace the 'ytplayer' element with an <iframe> and
+// YouTube player after the API code downloads.
+var player;
+function onYouTubePlayerAPIReady() {
+    player = new YT.Player('ytplayer', {
+        height: '315',
+        width: '500',
+        videoId: '9KY0nlLUZHc',
+        playerVars: {
+            'autoplay': 1,
+            'showinfo': 0,
+            'controls': 0
+        }
+    });
+}
+</script>
 
 
  <div id="container">
