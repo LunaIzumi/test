@@ -293,9 +293,400 @@ blink {animation: blink 1.5s infinite; margin-left: -5px;}
 
 <!--------------------------- START MAIN CONTENT---------------------------->
   
-  <video controls width="500" height="500" autoplay>
-  <source src="https://www.youtube.com/watch?v=9KY0nlLUZHc">
-  </video>
+<!DOCTYPE html PUBLIC>
+
+<html>
+
+<!-- THEME BY BONES | NUCLEARTHEMES -->
+
+<!--
+
+>> CREDITS
+
+• Custom tooltips by Atomiks >> https://atomiks.github.io/tippyjs/
+• Fonts from Google >> https://fonts.google.com/
+• Icons from Font Awesome >> https://fontawesome.com/
+• Placeholders from Unsplash >> https://unsplash.com/
+• Tumblr controls fix by odeysseus >> https://odeysseus.tumblr.com/
+
+
+>> KNOWN ISSUES & QUICK FIXES
+
+• the image is supposed to slide out of view when your screen gets smaller. if it doesn't entirely disappear, search for "#container img {margin-left: -800px;}" and change the -800 to something like -1000
+• you can add more custom links by copy pasting the appropriate code. should the links then appear too close together, increase the max-width of #navigation {}! make sure you increase the "max-width" and not "width", otherwise it doesn't work
+
+-->
+ 
+<head>
+ 
+<title>{Luna} / title</title> <!-- page title -->
+
+<link rel="shortcut icon" href="https://fontawesome.com/icons/moon?f=sharp&s=light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css?family=Nunito:400,400i,700,700i|Roboto+Mono:400,400i,700,700i" rel="stylesheet">
+
+<script src="https://kit.fontawesome.com/802dca85f3.js" crossorigin="anonymous"></script>
+
+<style type="text/css">
+
+* {margin:0; padding:0;}
+
+/* ----------------------------------------------------------------------- */
+/* ------------------------- MAIN CUSTOMIZATION -------------------------- */
+/* ----------- customize colors, fonts, sizes and other here! ------------ */
+/* ----------------------------------------------------------------------- */
+
+:root {
+    --background: url("https://i.ibb.co/xjH8sKj/aos-1080.gif");
+    --container: #002455;
+    --text: #F6C65C;
+    --accent: #25F41A;
+    --link: #000091;
+    --hover: #000091;
+    
+    --font-text: Dancing Script;
+    --font-special: Dancing Script;
+    
+    --font-size: 16px;
+    
+    --border-radius: 20px;
+}
+
+/* ----------------------------------------------------------------------- */
+/* --------------------------- tumblr controls --------------------------- */
+/* ----------------------------------------------------------------------- */
+
+.tmblr-iframe {
+    filter: invert(100%);
+    -o-filter: invert(100%); 
+    -moz-filter: invert(100%); 
+    -ms-filter: invert(100%); 
+    -webkit-filter: invert(100%); 
+    opacity: 0.2;
+    position: fixed;
+    right: 5px;
+    top: 5px;
+    transform: scale(0.7,0.7);
+    transform-origin: 100% 0%;
+    -ms-transform-origin: 100% 0%;
+    -webkit-transform-origin: 100% 0%;
+    transition: 0.4s;
+    -o-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -ms-transition: 0.4s;
+    -webkit-transition: 0.4s;
+    white-space: nowrap;
+} 
+    
+.tmblr-iframe:hover {
+    opacity: 1; 
+}
+
+/* ----------------------------------------------------------------------- */
+/* --------------------------- custom tooltips --------------------------- */
+/* ----------------------------------------------------------------------- */
+
+.tippy-tooltip.custom-theme {
+    background-color: var(--background);
+    border: 3px solid var(--accent);
+    border-radius: 0;
+    color: var(--accent);
+    font-family: var(--font-special);
+    font-size: inherit;
+    text-align: center;
+}
+
+/* ----------------------------------------------------------------------- */
+/* -------------------- custom selection & scrollbar --------------------- */
+/* ----------------------------------------------------------------------- */
+
+::-moz-selection {background: var(--background); color: var(--accent);}
+::selection {background: var(--background); color: var(--accent);}
+
+::-webkit-scrollbar-thumb 
+{background: var(--accent); border: 5px solid var(--background); border-radius: 20px;}
+::-webkit-scrollbar-track 
+{background: var(--nav); border: 8px solid var(--background);}
+::-webkit-scrollbar 
+{width: 20px;}
+
+/* ----------------------------------------------------------------------- */
+/* ----------------------------- page layout ----------------------------- */
+/* ----------------------------------------------------------------------- */
+
+body {
+    background: var(--background);
+    color: var(--text);
+    font-family: var(--font-text);
+    font-size: var(--font-size);
+    letter-spacing: 0.025em;
+    line-height: 100%;
+    overflow: hidden;
+    text-align: justify;
+}
+
+#container {
+    background-color: var(--container);
+    border-radius: var(--border-radius);
+    height: 310px;
+    margin: 225px 62% 250px 38%; 
+    max-width: 350px;
+    padding: 40px;
+    width: 85%;
+}
+
+i {line-height: 160%;}
+
+/* ----------------------------------------------------------------------- */
+/* ------------------------------- content ------------------------------- */
+/* ----------------------------------------------------------------------- */
+
+#navigation {
+    display: flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: -webkit-flex;
+    height: 43px;
+    justify-content: space-between;
+    margin-left: -120px;
+    max-width: 600px;
+    position: fixed;
+    top: 630px;
+    width: 50%;
+}
+
+.navlink {
+    background-color: var(--link);
+    border-radius: calc(var(--border-radius) * 0.5);
+    border-radius: -moz-calc(var(--border-radius) * 0.5);
+    border-radius: -webkit-calc(var(--border-radius) * 0.5);
+    color: var(--accent);
+    padding: 12px 10px 9px 10px;
+    text-align: center;
+    width: 75px;
+}
+  
+.navlink:hover {
+    background-color: var(--hover);
+    color: var(--accent);
+    transform: scale(1.25);
+    -moz-transform: scale(1.25);
+    -ms-transform: scale(1.25);
+    -o-transform: scale(1.25);
+    -webkit-transform: scale(1.25);
+}
+
+
+
+#content {
+    height: 400px;
+    margin-left: 2px;
+    margin-top: -30px;
+    overflow: auto;
+    -moz-overflow-style: none;
+    -ms-overflow-style: none;
+    -o-overflow-style: none;
+}
+
+#content::-webkit-scrollbar {display: none;}
+
+/* ----------------------------------------------------------------------- */
+/* -------------------------------- text --------------------------------- */
+/* ----------------------------------------------------------------------- */
+
+h1 {
+    font-family: var(--font-special);
+    font-size: .5em;
+    font-weight: normal;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-family: var(--font-text);
+    font-size: 1.5em;
+    font-weight: normal;
+    margin: 10px 5px;
+    text-transform: uppercase;
+}
+  
+a:hover {color: var(--hover);}
+a {color: var(--link); text-decoration: none;}
+#content a {border-bottom: 3px solid var(--link);}
+#content a:hover {border-bottom: 3px solid var(--hover);}
+
+/* ----------------------------------------------------------------------- */
+/* ---------------------------- transitions ------------------------------ */
+/* ----------------------------------------------------------------------- */
+
+a, a:hover, #content {
+    transition: 0.4s;
+    -moz-transition: 0.4s;
+    -ms-transition: 0.4s;
+    -o-transition: 0.4s;
+    -webkit-transition: 0.4s;
+}
+
+#credit, #credit:hover, img {
+    transition: 0.8s ease-out;
+    -moz-transition: 0.8s ease-out;
+    -ms-transition: 0.8s ease-out;
+    -o-transition: 0.8s ease-out;
+    -webkit-transition: 0.8s ease-out;
+}
+
+blink {animation: blink 1.5s infinite; margin-left: -5px;}
+@keyframes blink { 0% {opacity: 0} 25%{opacity: 0} 25% {opacity: 1} }
+
+/* ----------------------------------------------------------------------- */
+/* ------------------------------- credits ------------------------------- */
+/* ----------------------------------------------------------------------- */
+
+#credit {
+    color: var(--accent);
+    bottom: 0;
+    font-size: 20px;
+    font-style: italic;
+    margin: 10px;
+    padding: 10px 0px;
+    position: fixed;
+    right: 0;
+    text-align: center;
+    width: 40px;
+}
+
+#credit:hover {
+    transform: rotate(360deg) scale(1.5);
+    -moz-transform: rotate(360deg) scale(1.5);
+    -ms-transform: rotate(360deg) scale(1.5);
+    -o-transform: rotate(360deg) scale(1.5);
+    -webkit-transform: rotate(360deg) scale(1.5);
+}
+
+/* ----------------------------------------------------------------------- */
+/* ----------------------------- responsive ------------------------------ */
+/* ----------------------------------------------------------------------- */
+
+@media only screen and (max-width: 700px){
+    #container img {margin-left: -1500px;}
+    #content {margin-left: -500px; width: 100%;}
+}
+    
+</style>
+    
+</head>
+
+<!-------------------------------------------------------------------------->
+<!-------------------------------------------------------------------------->
+<!-------------------------- HEAD & BODY DIVIDER --------------------------->
+<!-------------------------------------------------------------------------->
+<!-------------------------------------------------------------------------->
+
+<body>
+
+<!--------------------------- START MAIN CONTENT---------------------------->
+  
+<iframe width="560" height="315" src="https://www.youtube.com/embed/9KY0nlLUZHc?si=3Sei7MRDIsIeDIKF&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<div id="container">
+
+    <!--<img src="https://i.ibb.co/xjH8sKj/aos-1080.gif"> <!-- image -->
+    
+    <div id="content">
+        
+        <h2 align="center">Wandering Mind,</h2> <!-- main title -->
+      <h2 align="center"> Luna Marie</h2>
+        
+Hello and welcome, my name is Luna. I'm a travelling IT systems expert with a passion for learning. I find peace in helping those in need and losing myself in a book. Originally from Florida, I don't spend long in one place these days. If you eve hope to find me now, I've found a new home on xat with new friends at Ecchi. I'd like to give a special thanks to those friends for always keeping me positive when I need it most.
+
+<br><br>
+
+<h2 align="center">Follow the Energy.</h2>
+
+Nothing feels better than knowing the people you meet foster the same energy as you. We walk different paths of this world, but somehow we find one another. Through this, we meet new people who teach us new ideas, give us new tastes, and show us new perspectives and cultures. Yet, it all begins with a simple hello.     
+    </div>
+    
+    <!-- navigation -->
+    
+    <div id="navigation">
+    
+        <!-- home link -->
+        
+       <!-- <a class="navlink" title="home" text="Home" href="https://xat.com/Ecchi">
+            <i class="fas fa-home"></i>
+        </a>-->
+      
+         <a href="https://xat.com/Ecchi" title="Ecchi">
+                    <div class="navlink">
+                        The Best 
+                    </div>
+         </a>
+        
+        <!-- custom link 1 -->
+
+          <a href="https://xat.me/Chaii" title="Chai">
+                    <div class="navlink">
+                        Pure One 
+                    </div>
+         </a>
+      
+        <!-- custom link 2 -->
+        
+          <a href="https://xat.me/Ecchi" title="Nana">
+                    <div class="navlink">
+                       Sweetheart 
+                    </div>
+         </a>
+        
+        <!-- custom link 3 -->
+ 
+      
+          <a href="https://xat.me/MrCLarkKent94" title="Clark">
+                    <div class="navlink">
+                        The Dork
+                    </div>
+         </a>  
+      
+      
+    </div>
+    
+</div>
+
+
+<!---------------------------- END MAIN CONTENT----------------------------->
+
+<!-- don't edit beyond this point please! colors can be modified in <style> -->
+
+<a id="credit" target="blank" title="by bones" href="https://nuclearthemes.tumblr.com/"><i class="fas fa-skull"></i></a>
+
+<script src="https://unpkg.com/popper.js@1"></script>
+<script src="https://unpkg.com/tippy.js@5/dist/tippy-bundle.iife.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/tippy.js@5/dist/svg-arrow.css" />
+
+<script>
+    tippy('[title]', {
+        theme: 'custom',
+        arrow: false,
+        delay: [100, 50],
+        placement: 'right',
+        zIndex: 9999999999,
+        maxWidth: 300,
+
+        content(reference) {
+            const title = reference.getAttribute('title');
+            reference.removeAttribute('title');
+            return title;
+        },
+    });
+</script>
+
+</body>
+
+</html>
+
 
 <div id="container">
 
